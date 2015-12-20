@@ -1,0 +1,86 @@
+name: AboutMe
+version: 1.0.0
+description: "Simple plugin to show some information about yourself, with a nice picture, your name and a description"
+icon: user 
+author:
+  name: Sébastien Viallemonteil
+  email: sviallemonteil@gmail.com
+  url: https://scratchmydev.com
+homepage: https://github.com/birssan/grav-plugin-about-me
+keywords: error, plugin, required
+bugs: https://github.com/birssan/grav-plugin-about-me/issues
+license: MIT
+
+form:
+  validation: loose
+  fields:
+    enabled:
+      type: toggle
+      label: Plugin status
+      highlight: 1
+      default: 0
+      options:
+        1: Enabled
+        0: Disabled
+      validate:
+        type: bool
+    name:
+      type: text
+      size: small
+      label: Name
+      validate:
+        type: text
+    title:
+      type: text
+      label: Title
+      validate:
+        type: text
+    description:
+      type: textarea
+      label: Description
+      validate:
+        type: text
+    Profile Picture:
+      type: section
+      title: Profile Picture
+      underline: true
+    picture.src:
+      type: text
+      size: small
+      label: "Source file (image must be in /user/pages/images/, or subfolder)"
+      validate:
+        type: text
+    picture.size:
+      type: text
+      size: small
+      label: Size (min 50)
+      validate:
+        type: number
+        min: 50
+    Gravatar:
+      type: section
+      title: Gravatar
+      underline: true
+    gravatar.enabled:
+      type: toggle
+      label: Gravatar status
+      highlight: 0
+      default: 0
+      options:
+        1: Enabled
+        0: Disabled
+      validate:
+        type: bool
+    gravatar.email:
+      type: text
+      size: small
+      label: Email
+      validate:
+        type: text
+    gravatar.size:
+      type: text
+      size: small
+      label: Size (min 50)
+      validate:
+        type: number
+        min: 50

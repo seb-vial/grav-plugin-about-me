@@ -1,0 +1,13 @@
+enabled: true
+
+name: "Santa Claus"
+title: "Present Giver"
+description: "Santa Claus, Saint Nicholas, Saint Nick, Father Christmas, Kris Kringle, Santy, or simply Santa is a figure with legendary, historical and folkloric origins who, in many Western cultures, is said to bring gifts to the homes of good children on 24 December, the night before Christmas Day. The modern figure of Santa Claus is derived from the British figure of Father Christmas, the Dutch figure of Sinterklaas, and Saint Nicholas, the historical Greek bishop and gift-giver of Myra. During the Christianization of Germanic Europe, this figure may also have absorbed elements of the god Odin, who was associated with the Germanic pagan midwinter event of Yule and led the Wild Hunt, a ghostly procession through the sky"
+picture: 
+    src: "santa.jpg"
+    size: 100
+
+gravatar:
+    enabled: false
+    email: "example@test.com"
+    size: 100

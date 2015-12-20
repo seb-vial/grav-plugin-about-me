@@ -1,0 +1,10 @@
+<div class="about-me">
+	{% if aboutme_gravatar %}
+		<img src="{{aboutme_picture_src }}" title="{{ aboutme_name }}" alt="Profile picture" />
+	{% else %}
+		{{ page.find('/images').media[aboutme_picture_src].cropZoom(aboutme_picture_size, aboutme_picture_size).html() }}
+	{% endif %}
+	<h4>{{ aboutme_name }}</h4>
+	<h3>{{ aboutme_title }}</h3>
+	<p>{{ aboutme_description }}</p>
+</div>
