@@ -36,7 +36,8 @@ class AboutMePlugin extends Plugin
         if ($this->config->get('plugins.aboutme.enabled')) {
             $this->enable([
                 'onTwigTemplatePaths'   => ['onTwigTemplatePaths', 0],
-                'onTwigSiteVariables'     => ['onTwigSiteVariables', 0]
+                'onTwigSiteVariables'   => ['onTwigSiteVariables', 0],
+                'onAssetsInitialized'   => ['onAssetsInitialized', 0]
             ]);
         }
     }
@@ -50,14 +51,8 @@ class AboutMePlugin extends Plugin
         $twig->twig_vars['aboutme_name'] = $this->config->get('plugins.aboutme.name');
         $twig->twig_vars['aboutme_title'] = $this->config->get('plugins.aboutme.title');
         $twig->twig_vars['aboutme_description'] = $this->config->get('plugins.aboutme.description');
-        $twig->twig_vars['aboutme_gravatar'] = $this->config->get('plugins.aboutme.gravatar.enabled');
-        if ($twig->twig_vars['aboutme_gravatar']) {
-            $twig->twig_vars['aboutme_picture_src'] = $this->getGravatarUrl();
-        }
-        else {
-            $twig->twig_vars['aboutme_picture_src'] = $this->config->get('plugins.aboutme.picture.src');
-            $twig->twig_vars['aboutme_picture_size'] = $this->config->get('plugins.aboutme.picture.size'); 
-        }
+        $twig->twig_vars['aboutme_picture_src'] = $this->config->get('plugins.aboutme.gravatar.enabled') ? 
+            $this->getGravatarUrl() : $this->config->get('plugins.aboutme.picture_src');
     }
 
     /**
@@ -78,5 +73,15 @@ class AboutMePlugin extends Plugin
         $url .= md5(strtolower(trim($gravatar['email'])));
         $url .= '?s=' . $gravatar['size'];
         return $url;
+    }
+
+    public function onAssetsInitialized()
+    {
+        if ($this->config->get('plugins.aboutme.built_in_css')) {
+            $this->grav['assets']->add('plugin://aboutme/assets/css/aboutme.css');
+        }
+        if ($this->config->get('plugins.aboutme.social_pages.use_font_awesome')) {
+            $this->grav['assets']->add('plugin://aboutme/assets/css/font-awesome.min.css');
+        }
     }
 }

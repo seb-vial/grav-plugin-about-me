@@ -1,10 +1,15 @@
 <div class="about-me">
-	{% if aboutme_gravatar %}
-		<img src="{{aboutme_picture_src }}" title="{{ aboutme_name }}" alt="Profile picture" />
-	{% else %}
-		{{ page.find('/images').media[aboutme_picture_src].cropZoom(aboutme_picture_size, aboutme_picture_size).html() }}
-	{% endif %}
+	<img src="{{ aboutme_picture_src }}" title="{{ aboutme_name }}" alt="Profile picture" />
 	<h4>{{ aboutme_name }}</h4>
 	<h3>{{ aboutme_title }}</h3>
 	<p>{{ aboutme_description }}</p>
+	{% if config.plugins.aboutme.social_pages.enabled %}
+		<div class="social-pages">
+		{% for page_name, url in config.plugins.aboutme.social_pages.pages %}
+			{% if url|length %}
+				<a href="{{ url }}" title="{{ page_name|camelize }}" target="_blank"><i class="fa fa-2x fa-{{ page_name }}"></i></a>
+			{% endif %}
+		{% endfor %}
+		</div>
+	{% endif %}
 </div>

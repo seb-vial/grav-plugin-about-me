@@ -1,0 +1,25 @@
+.about-me img {
+	-webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+	        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+	font-family: "Open Sans", Helvetica;
+	max-width: 100%;
+	max-height: 250px;
+}
+
+.about-me h4 {
+	margin-top: 5px;
+}
+
+.about-me h3 {
+	font-weight: 600;
+	margin: 5px auto;
+}
+
+.about-me .social-pages a {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.about-me .social-pages a + a {
+	margin-left: 10px;
+}

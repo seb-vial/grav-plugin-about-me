@@ -1,86 +1,156 @@
 name: AboutMe
 version: 1.0.0
-description: "Simple plugin to show some information about yourself, with a nice picture, your name and a description"
-icon: user 
+description: "Simple plugin to show some information about yourself, with a nice picture, your name, your title/job and a description.<br/>You can also add links to your social network pages (Twitter, Facebook, GitHub, Google Plus, LinkedIn, Instagram)."
+icon: user
 author:
-  name: Sébastien Viallemonteil
-  email: sviallemonteil@gmail.com
-  url: https://scratchmydev.com
+    name: Sébastien Viallemonteil
+    email: sviallemonteil@gmail.com
+    url: https://scratchmydev.com
 homepage: https://github.com/birssan/grav-plugin-about-me
 keywords: error, plugin, required
 bugs: https://github.com/birssan/grav-plugin-about-me/issues
 license: MIT
 
 form:
-  validation: loose
-  fields:
-    enabled:
-      type: toggle
-      label: Plugin status
-      highlight: 1
-      default: 0
-      options:
-        1: Enabled
-        0: Disabled
-      validate:
-        type: bool
-    name:
-      type: text
-      size: small
-      label: Name
-      validate:
-        type: text
-    title:
-      type: text
-      label: Title
-      validate:
-        type: text
-    description:
-      type: textarea
-      label: Description
-      validate:
-        type: text
-    Profile Picture:
-      type: section
-      title: Profile Picture
-      underline: true
-    picture.src:
-      type: text
-      size: small
-      label: "Source file (image must be in /user/pages/images/, or subfolder)"
-      validate:
-        type: text
-    picture.size:
-      type: text
-      size: small
-      label: Size (min 50)
-      validate:
-        type: number
-        min: 50
-    Gravatar:
-      type: section
-      title: Gravatar
-      underline: true
-    gravatar.enabled:
-      type: toggle
-      label: Gravatar status
-      highlight: 0
-      default: 0
-      options:
-        1: Enabled
-        0: Disabled
-      validate:
-        type: bool
-    gravatar.email:
-      type: text
-      size: small
-      label: Email
-      validate:
-        type: text
-    gravatar.size:
-      type: text
-      size: small
-      label: Size (min 50)
-      validate:
-        type: number
-        min: 50
+    validation: loose
+    fields:
+        enabled:
+            type: toggle
+            label: Plugin status
+            highlight: 1
+            default: 1
+            options:
+                1: Enabled
+                0: Disabled
+            validate:
+                type: bool
+        built_in_css:
+            type: toggle
+            label: Use Built in CSS
+            highlight: 1
+            default: 1
+            options:
+                1: Enabled
+                0: Disabled
+            validate:
+                type: bool
+        name:
+            type: text
+            size: small
+            label: Name
+            validate:
+                type: text
+        title:
+            type: text
+            label: Title
+            validate:
+                type: text
+        description:
+            type: textarea
+            label: Description
+            rows: 10
+            validate:
+                type: text
+        Profile Picture:
+            type: section
+            title: Profile Picture
+            underline: true
+        picture_src:
+            type: file
+            label: Picture file
+            multiple: false
+            destination: 'user/plugins/aboutme/assets/avatars'
+            showuploaded: true
+            showuploadedpreview: true
+            ispluginconfig: true
+            pluginname: 'aboutme'
+            accept:
+                - image/*
+        picture_size:
+            type: text
+            size: small
+            label: Size (min 50)
+            validate:
+                type: number
+                min: 50
+        Gravatar:
+            type: section
+            title: Gravatar
+            underline: true
+        gravatar.enabled:
+            type: toggle
+            label: Gravatar status
+            highlight: 0
+            default: 0
+            options:
+                1: Enabled
+                0: Disabled
+            validate:
+                type: bool
+        gravatar.email:
+            type: text
+            size: small
+            label: Email
+            validate:
+                type: text
+        gravatar.size:
+            type: text
+            size: small
+            label: Size (min 50)
+            validate:
+                type: number
+                min: 50
+        Social Pages:
+            type: section
+            title: Social Pages
+            underline: true
+        social_pages.enabled:
+            type: toggle
+            label: Social pages status
+            highlight: 1
+            default: 1
+            options:
+                1: Enabled
+                0: Disabled
+            validate:
+                type: bool
+        social_pages.use_font_awesome:
+            type: toggle
+            label: Use Font Awesome (Only if your theme does not use it already)
+            highlight: 0
+            default: 0
+            options:
+                1: Enabled
+                0: Disabled
+            validate:
+                type: bool
+        social_pages.pages.facebook:
+            type: url
+            label: Facebook
+            validate:
+                type: url
+        social_pages.pages.twitter:
+            type: url
+            label: Twitter
+            validate:
+                type: url
+        social_pages.pages.google-plus:
+            type: url
+            label: Google Plus
+            validate:
+                type: url
+        social_pages.pages.github:
+            type: url
+            label: GitHub
+            validate:
+                type: url
+        social_pages.pages.linkedin:
+            type: url
+            label: LinkedIn
+            validate:
+                type: url
+        social_pages.pages.instagram:
+            type: url
+            label: Instagram
+            validate:
+                type: url
