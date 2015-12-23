@@ -7,7 +7,7 @@ author:
     email: sviallemonteil@gmail.com
     url: https://scratchmydev.com
 homepage: https://github.com/birssan/grav-plugin-about-me
-keywords: error, plugin, required
+keywords: plugin, about, avatar, description, job
 bugs: https://github.com/birssan/grav-plugin-about-me/issues
 license: MIT
 
@@ -124,33 +124,143 @@ form:
                 0: Disabled
             validate:
                 type: bool
-        social_pages.pages.facebook:
-            type: url
-            label: Facebook
-            validate:
-                type: url
-        social_pages.pages.twitter:
-            type: url
-            label: Twitter
-            validate:
-                type: url
-        social_pages.pages.google-plus:
-            type: url
-            label: Google Plus
-            validate:
-                type: url
-        social_pages.pages.github:
-            type: url
-            label: GitHub
-            validate:
-                type: url
-        social_pages.pages.linkedin:
-            type: url
-            label: LinkedIn
-            validate:
-                type: url
-        social_pages.pages.instagram:
-            type: url
-            label: Instagram
-            validate:
-                type: url
+        Social Pages Types:
+            type: section
+            title: '&nbsp;'
+        social_pages_types:
+            type: tabs
+            active: 1
+            title: Pages
+            fields:
+                facebook:
+                    type: tab
+                    title: Facebook
+                    fields:
+                        social_pages.pages.facebook.icon:
+                            type: text
+                            size: small
+                            label: Font Awesome Icon
+                            default: facebook
+                            validate:
+                                type: text
+                        social_pages.pages.facebook.url:
+                            type: url
+                            label: Your Facebook Profile URL
+                            validate:
+                                type: url
+                        social_pages.pages.facebook.title:
+                            type: text
+                            label: Title when icon hovered (optional)
+                            default: Facebook
+                            validate:
+                                type: text
+                twitter:
+                    type: tab
+                    title: Twitter
+                    fields:
+                        social_pages.pages.twitter.icon:
+                            type: text
+                            size: small
+                            label: Font Awesome Icon
+                            default: twitter
+                            validate:
+                                type: text
+                        social_pages.pages.twitter.url:
+                            type: url
+                            label: Your Twitter Profile URL
+                            validate:
+                                type: url
+                        social_pages.pages.twitter.title:
+                            type: text
+                            label: Title when icon hovered (optional)
+                            default: Twitter
+                            validate:
+                                type: text
+                google_plus:
+                    type: tab
+                    title: Google+
+                    fields:
+                        social_pages.pages.google_plus.icon:
+                            type: text
+                            size: small
+                            label: Font Awesome Icon
+                            default: google-plus
+                            validate:
+                                type: text
+                        social_pages.pages.google_plus.url:
+                            type: url
+                            label: Your Google+ Profile URL
+                            validate:
+                                type: url
+                        social_pages.pages.google_plus.title:
+                            type: text
+                            label: Title when icon hovered (optional)
+                            default: Google+
+                            validate:
+                                type: text
+                github:
+                    type: tab
+                    title: GitHub
+                    fields:
+                        social_pages.pages.github.icon:
+                            type: text
+                            size: small
+                            label: Font Awesome Icon
+                            default: github
+                            validate:
+                                type: text
+                        social_pages.pages.github.url:
+                            type: url
+                            label: Your GitHub Profile URL
+                            validate:
+                                type: url
+                        social_pages.pages.github.title:
+                            type: text
+                            label: Title when icon hovered (optional)
+                            default: GitHub
+                            validate:
+                                type: text
+                linkedin:
+                    type: tab
+                    title: LinkedIn
+                    fields:
+                        social_pages.pages.linkedin.icon:
+                            type: text
+                            size: small
+                            label: Font Awesome Icon
+                            default: linkedin
+                            validate:
+                                type: text
+                        social_pages.pages.linkedin.url:
+                            type: url
+                            label: Your LinkedIn Profile URL
+                            validate:
+                                type: url
+                        social_pages.pages.linkedin.title:
+                            type: text
+                            label: Title when icon hovered (optional)
+                            default: LinkedIn
+                            validate:
+                                type: text
+                instagram:
+                    type: tab
+                    title: Instagram
+                    fields:
+                        social_pages.pages.instagram.icon:
+                            type: text
+                            size: small
+                            label: Font Awesome Icon
+                            default: instagram
+                            validate:
+                                type: text
+                        social_pages.pages.instagram.url:
+                            type: url
+                            label: Your Instagram Profile URL
+                            validate:
+                                type: url
+                        social_pages.pages.instagram.title:
+                            type: text
+                            label: Title when icon hovered (optional)
+                            default: Instagram
+                            validate:
+                                type: text

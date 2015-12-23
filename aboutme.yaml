@@ -17,8 +17,20 @@ social_pages:
   use_font_awesome: false           # Use FontAwesome, enable this option only if FontAwesome is not loaded by your theme or another plugin
   pages:                            # Url of your social network pages here ! Change the order at will (not possible to change the order with the admin plugin)
     facebook:
+      icon: facebook-official
+      title: Facebook
     twitter:
-    google-plus:
+      icon: twitter
+      title: Twitter
+    google_plus:
+      icon: google-plus-square
+      title: Google+
     github:
+      icon: github
+      title: GitHub
     linkedin:
-    instragram:
+      icon: linkedin-square
+      title: LinkedIn
+    instagram:
+      icon: instagram
+      title: Instagram
