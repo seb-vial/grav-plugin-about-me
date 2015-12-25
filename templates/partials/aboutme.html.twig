@@ -1,12 +1,15 @@
 <div class="about-me">
-	<img src="{{ uri.rootUrl(false) }}/{{ aboutme_picture_src }}" title="{{ aboutme_name }}" alt="Profile picture" />
+	{% set src = aboutme_picture_src %}
+	{% if not config.plugins.aboutme.gravatar.enabled %}
+		{% set src = uri.rootUrl(false) ~ (uri.rootUrl(false) == '/' ? '' : '/') ~ aboutme_picture_src %}
+	{% endif %}
+	<img src="{{ src }}" title="{{ aboutme_name }}" alt="Profile picture" />
 	<h4>{{ aboutme_name }}</h4>
 	<h3>{{ aboutme_title }}</h3>
 	<p>{{ aboutme_description }}</p>
 	{% if config.plugins.aboutme.social_pages.enabled %}
 		<div class="social-pages">
-		{{ dump(config.plugins.aboutme.social_pages.pages) }}
-		{% for page in config.plugins.aboutme.social_pages.pages %}
+		{% for page in aboutme_pages %}
 			{% if page.url|length %}
 				<a href="{{ page.url }}" {{ page.title ? 'title="' ~ page.title ~ '"' }} target="_blank"><i class="fa fa-2x fa-{{ page.icon }}"></i></a>
 			{% endif %}

@@ -9,7 +9,7 @@ You can also add links to your social network pages (Twitter, Facebook, GitHub, 
 
 * Pick an avatar, either from your computer or from gravatar
 * Let your visitors know a bit more about yourself, give your name, title/job and a nice description
-* Add links to your social network pages (Including: Twitter, Facebook, Google Plus, GitHub, LinkedIn, Instagram). It uses FontAwesome icons, if you theme already loads it, you don't need to enable the option in the plugin configuration
+* Add links to your social network pages (Including: Twitter, Facebook, Google Plus, GitHub, LinkedIn, Instagram). It uses FontAwesome icons, if your theme already loads it, you don't need to enable the option in the plugin configuration
 * Add other social network pages
 
 # Installation
@@ -56,13 +56,31 @@ gravatar:
 social_pages:
   enabled: true                     # Enables social network pages
   use_font_awesome: false           # Use FontAwesome, enable this option only if FontAwesome is not loaded by your theme or another plugin
-  pages:                            # Url of your social network pages here ! Change the order at will (not possible to change the order with the admin plugin)
+  pages:                            # Your social network pages here ! Change the order at will by changing the default position value. You can also change the font icon and the title
     facebook:
+      icon: facebook-official
+      title: Facebook
+      position: 1
     twitter:
-    google-plus:
+      icon: twitter
+      title: Twitter
+      position: 2
+    google_plus:
+      icon: google-plus-square
+      title: Google+
+      position: 3
     github:
+      icon: github
+      title: GitHub
+      position: 4
     linkedin:
-    instragram:
+      icon: linkedin-square
+      title: LinkedIn
+      position: 5
+    instagram:
+      icon: instagram
+      title: Instagram
+      position: 6
 ```
 
 By creating the configuration file: `user/config/plugins/aboutme.yaml` you have effectively created a site-wide configuration for AboutMe.
@@ -70,17 +88,24 @@ If you use the [Admin Plugin](https://github.com/getgrav/grav-plugin-admin) you 
 
 ## Add other social network pages
 
-In order to do that, you have to be sure the social network you want to add has an icon available in FontAwesome. You can search [here](http://fortawesome.github.io/Font-Awesome/icons/)
+In order to do that, you have to be sure the social network you want to add has an icon available in FontAwesome. You can check [here](http://fortawesome.github.io/Font-Awesome/icons/)
 For exemple you have a Pinterest account, FontAwesome offers you 3 icons, `pinterest`, `pinterest-p` and `pinterest-square`. Choose one that suits you and add it to your `user/config/plugins/aboutme.yaml` in the `pages` section like this:
 
 ```
 social_pages:
-  enabled: true                     # Enables social network pages
-  use_font_awesome: false           # Use FontAwesome, enable this option only if FontAwesome is not loaded by your theme or another plugin
-  pages:                            # Url of your social network pages here ! Change the order at will (not possible to change the order with the admin plugin)
-    twitter: https://twitter.com/mylogin
-    pinterest-square: https://www.pinterest.com/mylogin/ # You can replace pinterest-square by pinterest or pinterest-p depending on which icon you want
-    ...
+  enabled: true
+  use_font_awesome: false
+  pages:
+    twitter:
+      icon: twitter
+      title: Twitter
+      position: 1
+      url: https://twitter.com/myaccount
+    pinterest: 
+      icon: pinterest-square  # You can replace pinterest-square by pinterest or pinterest-p depending on which icon you want
+      title: Pinterest # Change the title if you don't like this one
+      position: 2 # Position the link will appear at
+      url: https://www.pinterest.com/mylogin/ # Your Pinterest account link
 ```
 
 # Usage

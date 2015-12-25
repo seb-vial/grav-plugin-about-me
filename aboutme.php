@@ -53,6 +53,12 @@ class AboutMePlugin extends Plugin
         $twig->twig_vars['aboutme_description'] = $this->config->get('plugins.aboutme.description');
         $twig->twig_vars['aboutme_picture_src'] = $this->config->get('plugins.aboutme.gravatar.enabled') ? 
             $this->getGravatarUrl() : $this->config->get('plugins.aboutme.picture_src');
+
+        $pages =  $this->config->get('plugins.aboutme.social_pages.pages');
+        uasort($pages, function($a, $b) {
+            return $a['position'] < $b['position'] ? -1 : $a['position'] == $b['position'] ? 0 : 1;
+        });
+        $twig->twig_vars['aboutme_pages'] = $pages;
     }
 
     /**

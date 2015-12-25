@@ -15,22 +15,28 @@ gravatar:
 social_pages:
   enabled: true                     # Enables social network pages
   use_font_awesome: false           # Use FontAwesome, enable this option only if FontAwesome is not loaded by your theme or another plugin
-  pages:                            # Url of your social network pages here ! Change the order at will (not possible to change the order with the admin plugin)
+  pages:                            # Your social network pages here ! Change the order at will by changing the default position value. You can also change the font icon and the title
     facebook:
       icon: facebook-official
       title: Facebook
+      position: 1
     twitter:
       icon: twitter
       title: Twitter
+      position: 2
     google_plus:
       icon: google-plus-square
       title: Google+
+      position: 3
     github:
       icon: github
       title: GitHub
+      position: 4
     linkedin:
       icon: linkedin-square
       title: LinkedIn
+      position: 5
     instagram:
       icon: instagram
       title: Instagram
+      position: 6
