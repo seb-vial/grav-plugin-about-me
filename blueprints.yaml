@@ -65,7 +65,7 @@ form:
             ispluginconfig: true
             pluginname: 'aboutme'
             accept:
-                - image/
+                - image/*
         Gravatar:
             type: section
             title: Gravatar
