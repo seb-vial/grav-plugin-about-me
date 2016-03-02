@@ -75,7 +75,7 @@ class AboutMePlugin extends Plugin
     private function getGravatarUrl()
     {
         $gravatar = $this->config->get('plugins.aboutme.gravatar');
-        $url = 'http://www.gravatar.com/avatar/';
+        $url = '//www.gravatar.com/avatar/';
         $url .= md5(strtolower(trim($gravatar['email'])));
         $url .= '?s=' . $gravatar['size'];
         return $url;
