@@ -1,3 +1,9 @@
+# v1.1.1
+## 03/03/2016
+
+1. [](#bugfix)
+    * Fix hardcoded `http` reference for gravatar that breaks https websites
+
 # v1.1.0
 ## 12/25/2015
 

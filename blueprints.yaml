@@ -1,5 +1,5 @@
 name: AboutMe
-version: 1.1.0
+version: 1.1.1
 description: "Simple plugin to show some information about yourself, with a nice picture, your name, your title/job and a description.<br/>You can also add links to your social network pages (Twitter, Facebook, GitHub, Google Plus, LinkedIn, Instagram)."
 icon: user
 author:
