@@ -46,11 +46,10 @@ form:
             validate:
                 type: text
         description:
-            type: textarea
+            type: markdown
             label: Description
-            rows: 10
             validate:
-                type: text
+                type: textarea
         Profile Picture:
             type: section
             title: Profile Picture
@@ -117,9 +116,10 @@ form:
                 0: Disabled
             validate:
                 type: bool
-        Social Pages Types:
-            type: section
-            title: '&nbsp;'
+        social_pages_types_spacer:
+            type: spacer
+            title: Social Pages Types
+            underline: true
         social_pages_types:
             type: tabs
             active: 1

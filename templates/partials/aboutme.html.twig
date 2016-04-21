@@ -6,7 +6,7 @@
 	<img src="{{ src }}" title="{{ aboutme_name }}" alt="Profile picture" />
 	<h4>{{ aboutme_name }}</h4>
 	<h3>{{ aboutme_title }}</h3>
-	<p>{{ aboutme_description }}</p>
+	<p>{{ aboutme_description|nl2br|markdown }}</p>
 	{% if config.plugins.aboutme.social_pages.enabled %}
 		<div class="social-pages">
 		{% for page in aboutme_pages %}
