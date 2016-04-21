@@ -1,4 +1,10 @@
 # v1.1.1
+## 04/21/2016
+
+1. [](#improved)
+    * The description can now contains markdown and break lines
+
+# v1.1.1
 ## 03/03/2016
 
 1. [](#bugfix)
