@@ -11,6 +11,7 @@ You can also add links to your social network pages (Twitter, Facebook, GitHub, 
 * Let your visitors know a bit more about yourself, give your name, title/job and a nice description
 * Add links to your social network pages (Including: Twitter, Facebook, Google Plus, GitHub, LinkedIn, Instagram). It uses FontAwesome icons, if your theme already loads it, you don't need to enable the option in the plugin configuration
 * Add other social network pages
+* Add [h-card](http://microformats.org/wiki/h-card) microformats to your homepage to help re-decentralize the Web with the [Indieweb](https://indieweb.org) principles.
 
 # Installation
 
