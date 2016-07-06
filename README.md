@@ -129,5 +129,4 @@ The simplest way to update this plugin is via the [Grav Package Manager (GPM)](h
 
 This command will check your Grav install to see if your AboutMe plugin is due for an update. If a newer release is found, you will be asked whether or not you wish to update. To continue, type `y` and hit enter. The plugin will automatically update and clear Grav's cache.
 
-
 > Note: Any changes you have made to any of the files listed under this directory will also be removed and replaced by the new set. Any files located elsewhere (for example a YAML settings file placed in `user/config/plugins`) will remain intact.
