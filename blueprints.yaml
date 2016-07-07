@@ -59,10 +59,7 @@ form:
             label: Picture file
             multiple: false
             destination: 'user/plugins/aboutme/assets/avatars'
-            showuploaded: true
-            showuploadedpreview: true
-            ispluginconfig: true
-            pluginname: 'aboutme'
+            blueprint: plugin.aboutme
             accept:
                 - image/*
         Gravatar:
