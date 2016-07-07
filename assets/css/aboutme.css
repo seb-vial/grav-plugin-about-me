@@ -23,3 +23,12 @@
 .about-me .social-pages a + a {
 	margin-left: 10px;
 }
+
+.h-entry .h-card .u-photo {
+    display: table-cell;
+    vertical-align: middle;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+	        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}

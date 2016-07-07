@@ -34,6 +34,26 @@ form:
                 0: Disabled
             validate:
                 type: bool
+        display_on_items:
+            type: toggle
+            label: Display authorship information on blog articles. Don't forget to enable "Use Built in CSS"!
+            highlight: 0
+            default: 0
+            options:
+                1: Enabled
+                0: Disabled
+            validate:
+                type: bool
+        display_in_sidebar:
+            type: toggle
+            label: Enable "Social Media" widget in the sidebar. Don't forget to enable "Use Built-in CSS"!
+            highlight: 1
+            defaults: 1
+            options:
+                1: Enabled
+                0: Disabled
+            validate:
+                type: bool
         name:
             type: text
             size: small
