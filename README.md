@@ -47,6 +47,10 @@ name: 'Santa Claus'         # Your full name
 title: 'Present Giver'      # Your title/job
 description: 'Santa Claus, Saint Nicholas, Saint Nick, Father Christmas, Kris Kringle, Santy, or simply Santa is a figure with legendary, historical and folkloric origins who, in many Western cultures, is said to bring gifts to the homes of good children on 24 December, the night before Christmas Day. The modern figure of Santa Claus is derived from the British figure of Father Christmas, the Dutch figure of Sinterklaas, and Saint Nicholas, the historical Greek bishop and gift-giver of Myra. During the Christianization of Germanic Europe, this figure may also have absorbed elements of the god Odin, who was associated with the Germanic pagan midwinter event of Yule and led the Wild Hunt, a ghostly procession through the sky'   # Tell us a bit about yourself
 
+# For more information on these two options, see Usage
+display_on_items: false # Enables the visible display of blog article authorship. Disabling still ads the info, but makes it invisible.
+display_in_sidebar: true # Enables or disables aboutme page in the sidebar.
+
 picture_src: user/plugins/aboutme/assets/avatars/santa.jpg      # The path of your avatar, I recommand to use the admin plugin and go to the plugin configuration so you can upload your avatar there, the path will be filled for you.
 
 gravatar:
@@ -111,10 +115,31 @@ social_pages:
 
 # Usage
 
+## Standard usage
+
 It's pretty straight forward actually, just include the partial template from the plugin wherever you want it to show in your page.
 
 ```
 {% include 'partials/aboutme.html.twig' %}
+```
+
+## Sidebar usage
+
+If you'd like to add your social media accounts in your sidebar, edit partials/sidebar.html.twig :
+```
+{% if config.plugins.aboutme.enabled and config.plugins.aboutme.display_in_sidebar %}
+<div class="sidebar-content">
+    {% include 'partials/aboutme_sidebar.html.twig' %}
+</div>
+{% endif %}
+```
+
+## Blog usage
+To add authorship information on every blog article, edit partials/blog_item.html.twig (for example before taxonomy links) :
+```
+{% if config.plugins.aboutme.enabled %}
+    {% include 'partials/aboutme_inline.html.twig' %}
+{% endif %}
 ```
 
 # Updating
