@@ -1,2 +1,3 @@
 assets/avatars/*
+!assets/avatars/santa.jpg
 !assets/avatars/.*
