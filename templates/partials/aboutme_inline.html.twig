@@ -2,4 +2,4 @@
 {% if not config.plugins.aboutme.gravatar.enabled %}
 	{% set src = uri.rootUrl(false) ~ (uri.rootUrl(false) == '/' ? '' : '/') ~ aboutme_picture_src %}
 {% endif %}
-<span style="display:none" class="h-card"><img class="u-photo" src="{{ src }}" alt="Profile picture" /><a class="p-name u-url" href="{{ base_url == '' ? '/' : base_url }}">{{ aboutme_name }}</a></span>
+<span style="display:none" class="h-card p-author"><a rel="author" class="p-name u-url" href="{{ base_url == '' ? '/' : base_url }}">{{ aboutme_name }}</a><img class="u-photo" src="{{ src }}" alt="Profile picture" /></span>
