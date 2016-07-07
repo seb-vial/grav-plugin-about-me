@@ -1,19 +1,20 @@
-<div class="about-me">
+<div class="about-me h-card">
 	{% set src = aboutme_picture_src %}
 	{% if not config.plugins.aboutme.gravatar.enabled %}
 		{% set src = uri.rootUrl(false) ~ (uri.rootUrl(false) == '/' ? '' : '/') ~ aboutme_picture_src %}
 	{% endif %}
-	<img src="{{ src }}" title="{{ aboutme_name }}" alt="Profile picture" />
-	<h4>{{ aboutme_name }}</h4>
+	<img src="{{ src }}" title="{{ aboutme_name }}" alt="Profile picture" class="u-photo" />
+	<h4><a href="{{ base_url == '' ? '/' : base_url }}" class="p-name u-url">{{ aboutme_name }}</a></h4>
 	<h3>{{ aboutme_title }}</h3>
-	<p>{{ aboutme_description|nl2br|markdown }}</p>
+	<p class="p-note">{{ aboutme_description|nl2br|markdown }}</p>
 	{% if config.plugins.aboutme.social_pages.enabled %}
 		<div class="social-pages">
 		{% for page in aboutme_pages %}
 			{% if page.url|length %}
-				<a href="{{ page.url }}" {{ page.title ? 'title="' ~ page.title ~ '"' }} target="_blank"><i class="fa fa-2x fa-{{ page.icon }}"></i></a>
+				<a href="{{ page.url }}" {{ page.title ? 'title="' ~ page.title ~ '"' }} target="_blank" rel="me" class="u-url"><i class="fa fa-2x fa-{{ page.icon }}"></i></a>
 			{% endif %}
 		{% endfor %}
 		</div>
 	{% endif %}
 </div>
+
