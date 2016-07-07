@@ -1,3 +1,9 @@
+# v1.1.3
+## 07/07/2016
+
+1. [](#improved)
+    * Grav 1.1 (RC3) uses arrays instead of simple string for files uploaded in plugins/themes. The plugin now works for Grav 1.0 and 1.1 (RC3)
+
 # v1.1.2
 ## 04/21/2016
 
