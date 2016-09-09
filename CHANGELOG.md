@@ -1,3 +1,9 @@
+# v1.1.4
+## 09/09/2016
+
+1. [](#bugfix)
+    * There were some issues when changing fields value of the plugin from the admin page; due to changes to the file upload system and merging system between user config file and plugin config file.
+
 # v1.1.3
 ## 07/07/2016
 
