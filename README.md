@@ -122,6 +122,9 @@ It's pretty straight forward actually, just include the partial template from th
 {% include 'partials/aboutme.html.twig' %}
 ```
 
+Don't forget to activate Twig processing in advanced options so the code above is processed.
+![Process Twig](twig_process.png)
+
 # Updating
 
 As development for AboutMe continues, new versions may become available that add additional features and functionality, improve compatibility with newer Grav releases, and generally provide a better user experience. Updating AboutMe is easy, and can be done through Grav's GPM system, as well as manually.
