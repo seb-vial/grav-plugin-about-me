@@ -36,10 +36,21 @@ class AboutMePlugin extends Plugin
         if ($this->config->get('plugins.aboutme.enabled')) {
             $this->enable([
                 'onTwigTemplatePaths'   => ['onTwigTemplatePaths', 0],
+                'onTwigPageVariables'   => ['onTwigPageVariables', 0],
                 'onTwigSiteVariables'   => ['onTwigSiteVariables', 0],
                 'onAssetsInitialized'   => ['onAssetsInitialized', 0]
             ]);
         }
+    }
+
+    /**
+     * We set twig variable in case the template is included in a page and not in a theme template
+     *
+     * @param Event $e
+     */
+    public function onTwigPageVariables(Event $e)
+    {
+        $this->onTwigSiteVariables();
     }
 
     /**
