@@ -1,3 +1,11 @@
+# v1.1.5
+## 10/17/2016
+
+1. [](#bugfix)
+    * When the template was included in a page content with twig processing enabled, twig variables were not set in some cases (ie: with Shortcode plugin enabled, that might be the case for other plugins involving page content).
+2. [](#bugfix)
+    * Using raw filter in the template for more theme compatibility.
+
 # v1.1.4
 ## 09/09/2016
 
