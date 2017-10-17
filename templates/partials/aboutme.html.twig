@@ -6,7 +6,7 @@
 	<img src="{{ src }}" title="{{ aboutme_name }}" alt="Profile picture" class="u-photo" />
 	<h4><a href="{{ base_url == '' ? '/' : base_url }}" class="p-name u-url">{{ aboutme_name }}</a></h4>
 	<h3>{{ aboutme_title }}</h3>
-	<p class="p-note">{{ aboutme_description|nl2br|markdown }}</p>
+	<p class="p-note">{{ aboutme_description|nl2br|markdown|raw }}</p>
 	{% if config.plugins.aboutme.social_pages.enabled %}
 		<div class="social-pages">
 		{% for page in aboutme_pages %}
@@ -17,4 +17,3 @@
 		</div>
 	{% endif %}
 </div>
-
