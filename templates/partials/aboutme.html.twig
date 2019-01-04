@@ -5,7 +5,9 @@
 	{% endif %}
 	<img src="{{ src }}" title="{{ aboutme_name }}" alt="Profile picture" class="u-photo" />
 	<h4><a href="{{ base_url == '' ? '/' : base_url }}" class="p-name u-url">{{ aboutme_name }}</a></h4>
-	<h3>{{ aboutme_title }}</h3>
+	{% if config.plugins.aboutme.show_title -%}
+		<h3>{{ aboutme_title }}</h3>
+	{%- endif %}
 	<div class="p-note">{{ aboutme_description|nl2br|markdown|raw }}</div>
 	{% if config.plugins.aboutme.social_pages.enabled %}
 		<div class="social-pages">

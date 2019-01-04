@@ -1,0 +1,9 @@
+en:
+  PLUGIN_ABOUTME:
+    SHOW_TITLE: Show title/job
+    SHOW_TITLE_HELP: Show title/job in your About Me card
+
+nl:
+  PLUGIN_ABOUTME:
+    SHOW_TITLE: Toon titel/functie
+    SHOW_TITLE_HELP: "Toon titel/functie in je 'About Me' kaart"

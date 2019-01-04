@@ -45,6 +45,17 @@ form:
             label: Title
             validate:
                 type: text
+        show_title:
+            type: toggle
+            label: PLUGIN_ABOUTME.SHOW_TITLE
+            help: PLUGIN_ABOUTME.SHOW_TITLE_HELP
+            default: 1
+            highlight: 0
+            options:
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
+            validate:
+                type: bool
         description:
             type: markdown
             label: Description
