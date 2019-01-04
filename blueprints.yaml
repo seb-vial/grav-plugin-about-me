@@ -47,12 +47,22 @@ form:
                 type: text
         show_title:
             type: toggle
+<<<<<<< HEAD
             label: Show title/job
             default: 1
             highlight: 0
             options:
                 1: Enabled
                 0: Disabled
+=======
+            label: PLUGIN_ABOUTME.SHOW_TITLE
+            help: PLUGIN_ABOUTME.SHOW_TITLE_HELP
+            default: 1
+            highlight: 0
+            options:
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
+>>>>>>> c30a8eb0ad858ad7d217f8285bde1a91c36c41d9
             validate:
                 type: bool
         description:
