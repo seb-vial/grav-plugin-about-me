@@ -1,0 +1,27 @@
+en:
+  PLUGIN_ABOUTME:
+    ENABLED: Plugin status
+    BUILT_IN_CSS: Use Built in CSS
+    NAME: Name
+    TITLE: Title
+    SHOW_TITLE: Show title/job
+    DESCRIPTION: Description
+    PICTURE:
+      SECTION: Profile Picture
+      PICTURE_SRC: Picture file
+    GRAVATAR:
+      SECTION: Gravatar
+      ENABLED: Gravatar status
+      EMAIL: Email
+      SIZE: Size (min 50)
+    SOCIAL_PAGES:
+      SECTION: Social Pages
+      ENABLED: Social pages status
+      USE_FONT_AWESOME: Use Font Awesome (Only if your theme does not use it already)
+    SOCIAL_PAGES_TYPES:
+      SPACER: Social Pages Types
+      TABS: Pages
+      ICON: Font Awesome Icon
+      URL: Your Service Profile URL
+      TITLE: Title when icon hovered (optional)
+      POSITION: Position
