@@ -82,11 +82,12 @@ form:
             validate:
                 type: text
         gravatar.size:
-            type: text
+            type: number
             size: small
             label: Size (min 50)
+            default: 100
             validate:
-                type: number
+                type: int
                 min: 50
         Social Pages:
             type: section
