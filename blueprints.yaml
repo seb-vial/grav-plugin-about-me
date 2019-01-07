@@ -45,6 +45,16 @@ form:
             label: Title
             validate:
                 type: text
+        show_title:
+            type: toggle
+            label: Show title/job
+            default: 1
+            highlight: 0
+            options:
+                1: Enabled
+                0: Disabled
+            validate:
+                type: bool
         description:
             type: markdown
             label: Description
