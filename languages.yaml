@@ -25,6 +25,34 @@ en:
       URL: Your Service Profile URL
       TITLE: Title when icon hovered (optional)
       POSITION: Position
+      
+fr:
+  PLUGIN_ABOUTME:
+    ENABLED: Statut du plugin
+    BUILT_IN_CSS: Utiliser le CSS natif
+    NAME: Nom
+    TITLE: Titre / emploi
+    SHOW_TITLE: Afficher le titre / emploi
+    DESCRIPTION: Description
+    PICTURE:
+      SECTION: Photo de profil
+      PICTURE_SRC: Fichier photo
+    GRAVATAR:
+      SECTION: Gravatar
+      ENABLED: Statut Gravatar
+      EMAIL: Email
+      SIZE: Taille (min 50)
+    SOCIAL_PAGES:
+      SECTION: Réseaux sociaux
+      ENABLED: Statut des réseaux sociaux
+      USE_FONT_AWESOME: Utilise Font Awesome (Seulement si votre thème ne l'utilise pas déjà)
+    SOCIAL_PAGES_TYPES:
+      SPACER: Types de réseaux sociaux
+      TABS: Pages
+      ICON: Icône Font Awesome
+      URL: L'URL de votre page sur le réseaux social
+      TITLE: Titre lors du survol de l'icône (optionnel)
+      POSITION: Position (ordre)
 
 nl:
   PLUGIN_ABOUTME:
