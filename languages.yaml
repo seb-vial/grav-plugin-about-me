@@ -25,3 +25,31 @@ en:
       URL: Your Service Profile URL
       TITLE: Title when icon hovered (optional)
       POSITION: Position
+
+nl:
+  PLUGIN_ABOUTME:
+    ENABLED: Plugin status
+    BUILT_IN_CSS: Gebruik ingebouwde CSS
+    NAME: Naam
+    TITLE: Titel
+    SHOW_TITLE: Toon titel/functie
+    DESCRIPTION: Beschrijving
+    PICTURE:
+      SECTION: Profielafbeelding
+      PICTURE_SRC: Afbeeldingsbestand
+    GRAVATAR:
+      SECTION: Gravatar
+      ENABLED: Gravatar status
+      EMAIL: Email
+      SIZE: Afmeting
+    SOCIAL_PAGES:
+      SECTION: Sociale pagina's
+      ENABLED: Sociale pagina's status
+      USE_FONT_AWESOME: Gebruik Font Awesome (Alleen als uw thema dit niet al gebruikt)
+    SOCIAL_PAGES_TYPES:
+      SPACER: Types sociale pagina's
+      TABS: Pagina's
+      ICON: Font Awesome icoon
+      URL: Uw serviceprofiel-URL
+      TITLE: Titel indien boven icoon (optioneel)
+      POSITION: Positie
