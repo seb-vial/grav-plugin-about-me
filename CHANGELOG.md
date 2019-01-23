@@ -1,3 +1,17 @@
+# v1.2.0
+## 01/23/2019
+
+1. [](#improved)
+    * The description HTML tag is now a div.
+2. [](#improved)
+    * The Gravatar size field type is now a number.
+3. [](#new)
+    * Added a toggle for the job / title field.
+4. [](#new)
+    * Added support for multi-language.
+5. [](#improved)
+    * Fixed documentation markdown titles.
+
 # v1.1.5
 ## 10/17/2016
 
