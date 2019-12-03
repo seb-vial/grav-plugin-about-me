@@ -3,15 +3,15 @@
 ![AboutMe](screenshot.jpeg)
 
 AboutMe is a simple plugin to show some information about yourself, with a nice picture, your name, your title/job and a description.
-You can also add links to your social network pages (Twitter, Facebook, GitHub, Google Plus, LinkedIn, Instagram).
+You can also add links to your social network pages (Twitter, Facebook, GitHub, LinkedIn, Instagram).
 
 ## Features
 
-* Pick an avatar, either from your computer or from gravatar
-* Let your visitors know a bit more about yourself, give your name, title/job and a nice description
-* Add links to your social network pages (Including: Twitter, Facebook, Google Plus, GitHub, LinkedIn, Instagram). It uses FontAwesome icons, if your theme already loads it, you don't need to enable the option in the plugin configuration
-* Add other social network pages
-* Add [h-card](http://microformats.org/wiki/h-card) microformats to your homepage to help re-decentralize the Web with the [Indieweb](https://indieweb.org) principles.
+- Pick an avatar, either from your computer or from gravatar
+- Let your visitors know a bit more about yourself, give your name, title/job and a nice description
+- Add links to your social network pages (Including: Twitter, Facebook, GitHub, LinkedIn, Instagram). It uses FontAwesome icons, if your theme already loads it, you don't need to enable the option in the plugin configuration
+- Add other social network pages
+- Add [h-card](http://microformats.org/wiki/h-card) microformats to your homepage to help re-decentralize the Web with the [Indieweb](https://indieweb.org) principles.
 
 ## Installation
 
@@ -19,7 +19,7 @@ Installing the AboutMe plugin can be done in one of two ways. GPM (Grav Package 
 
 ### GPM Installation (Preferred)
 
-The simplest way to install this plugin is via the [Grav Package Manager (GPM)](http://learn.getgrav.org/advanced/grav-gpm) through your system's Terminal (also called the command line).  From the root of your Grav install type:
+The simplest way to install this plugin is via the [Grav Package Manager (GPM)](http://learn.getgrav.org/advanced/grav-gpm) through your system's Terminal (also called the command line). From the root of your Grav install type:
 
     bin/gpm install aboutme
 
@@ -40,13 +40,13 @@ You should now have all the plugin files under
 To effectively use the plugin, you first need to create an override config. To do so, create the folder `user/config/plugins` (if it doesn't exist already) and copy the [aboutme.yaml][aboutme] config file in there.
 
 ```yaml
-enabled: true               # Activate the plugin
-built_in_css: true          # Use the default CSS
+enabled: true # Activate the plugin
+built_in_css: true # Use the default CSS
 
-name: 'Santa Claus'         # Your full name
-title: 'Present Giver'      # Your title/job
-show_title: true            # Show your title/job
-description: 'Santa Claus, Saint Nicholas, Saint Nick, Father Christmas, Kris Kringle, Santy, or simply Santa is a figure with legendary, historical and folkloric origins who, in many Western cultures, is said to bring gifts to the homes of good children on 24 December, the night before Christmas Day. The modern figure of Santa Claus is derived from the British figure of Father Christmas, the Dutch figure of Sinterklaas, and Saint Nicholas, the historical Greek bishop and gift-giver of Myra. During the Christianization of Germanic Europe, this figure may also have absorbed elements of the god Odin, who was associated with the Germanic pagan midwinter event of Yule and led the Wild Hunt, a ghostly procession through the sky'   # Tell us a bit about yourself
+name: "Santa Claus" # Your full name
+title: "Present Giver" # Your title/job
+show_title: true # Show your title/job
+description: "Santa Claus, Saint Nicholas, Saint Nick, Father Christmas, Kris Kringle, Santy, or simply Santa is a figure with legendary, historical and folkloric origins who, in many Western cultures, is said to bring gifts to the homes of good children on 24 December, the night before Christmas Day. The modern figure of Santa Claus is derived from the British figure of Father Christmas, the Dutch figure of Sinterklaas, and Saint Nicholas, the historical Greek bishop and gift-giver of Myra. During the Christianization of Germanic Europe, this figure may also have absorbed elements of the god Odin, who was associated with the Germanic pagan midwinter event of Yule and led the Wild Hunt, a ghostly procession through the sky" # Tell us a bit about yourself
 
 picture_src: # The path of your avatar, I recommand to use the admin plugin and go to the plugin configuration so you can upload your avatar there, the path will be filled for you.
   user/plugins/aboutme/assets/avatars/santa.jpg:
@@ -56,38 +56,39 @@ picture_src: # The path of your avatar, I recommand to use the admin plugin and 
     path: user/plugins/aboutme/assets/avatars/santa.jpg
 
 gravatar:
-  enabled: false                    # Enables gravatar, it will override picture_src option
-  email: "example@test.com"         # The email address your gravatar is attached to
-  size: 100                         # The size of your gravatar
+  enabled: false # Enables gravatar, it will override picture_src option
+  email: "example@test.com" # The email address your gravatar is attached to
+  size: 100 # The size of your gravatar
 
 social_pages:
-  enabled: true                     # Enables social network pages
-  use_font_awesome: false           # Use FontAwesome, enable this option only if FontAwesome is not loaded by your theme or another plugin
-  pages:                            # Your social network pages here ! Change the order at will by changing the default position value. You can also change the font icon and the title
+  enabled: true # Enables social network pages
+  use_font_awesome: false # Use FontAwesome, enable this option only if FontAwesome is not loaded by your theme or another plugin
+  pages: # Your social network pages here ! Change the order at will by changing the default position value. You can also change the font icon and the title
     facebook:
-      icon: facebook-official
+      icon_type: b
+      icon: facebook
       title: Facebook
       position: 1
     twitter:
+      icon_type: b
       icon: twitter
       title: Twitter
       position: 2
-    google_plus:
-      icon: google-plus-square
-      title: Google+
-      position: 3
     github:
+      icon_type: b
       icon: github
       title: GitHub
-      position: 4
+      position: 3
     linkedin:
-      icon: linkedin-square
+      icon_type: b
+      icon: linkedin
       title: LinkedIn
-      position: 5
+      position: 4
     instagram:
+      icon_type: b
       icon: instagram
       title: Instagram
-      position: 6
+      position: 5
 ```
 
 By creating the configuration file: `user/config/plugins/aboutme.yaml` you have effectively created a site-wide configuration for AboutMe.
@@ -104,12 +105,14 @@ social_pages:
   use_font_awesome: false
   pages:
     twitter:
+      icon_type: b
       icon: twitter
       title: Twitter
       position: 1
       url: https://twitter.com/myaccount
-    pinterest: 
-      icon: pinterest-square  # You can replace pinterest-square by pinterest or pinterest-p depending on which icon you want
+    pinterest:
+      icon_type: b # 'b' is for brand, 's' for solid and 'r' for regular. Official social icons are always brand icons.
+      icon: pinterest # You can replace pinterest by pinterest-square or pinterest-p depending on which icon you want
       title: Pinterest # Change the title if you don't like this one
       position: 2 # Position the link will appear at
       url: https://www.pinterest.com/mylogin/ # Your Pinterest account link

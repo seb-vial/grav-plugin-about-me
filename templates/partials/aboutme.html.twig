@@ -13,7 +13,7 @@
 		<div class="social-pages">
 		{% for page in aboutme_pages %}
 			{% if page.url|length %}
-				<a href="{{ page.url }}" {{ page.title ? 'title="' ~ page.title ~ '"' }} target="_blank" rel="me" class="u-url"><i class="fa fa-2x fa-{{ page.icon }}"></i></a>
+				<a href="{{ page.url }}" {{ page.title ? 'title="' ~ page.title ~ '"' }} target="_blank" rel="me" class="u-url"><i class="fa{{ page.icon_type }} fa-2x fa-{{ page.icon }}"></i></a>
 			{% endif %}
 		{% endfor %}
 		</div>

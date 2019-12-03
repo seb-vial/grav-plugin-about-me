@@ -21,11 +21,12 @@ en:
     SOCIAL_PAGES_TYPES:
       SPACER: Social Pages Types
       TABS: Pages
-      ICON: Font Awesome Icon
+      ICON_TYPE: Font Awesome icon type
+      ICON: Font Awesome icon
       URL: Your Service Profile URL
       TITLE: Title when icon hovered (optional)
       POSITION: Position
-      
+
 fr:
   PLUGIN_ABOUTME:
     ENABLED: Statut du plugin
@@ -49,6 +50,7 @@ fr:
     SOCIAL_PAGES_TYPES:
       SPACER: Types de réseaux sociaux
       TABS: Pages
+      ICON_TYPE: Type d'icône Font Awesome
       ICON: Icône Font Awesome
       URL: L'URL de votre page sur le réseaux social
       TITLE: Titre lors du survol de l'icône (optionnel)
@@ -77,6 +79,7 @@ nl:
     SOCIAL_PAGES_TYPES:
       SPACER: Types sociale pagina's
       TABS: Pagina's
+      ICON_TYPE: Font Awesome icoon type
       ICON: Font Awesome icoon
       URL: Uw serviceprofiel-URL
       TITLE: Titel indien boven icoon (optioneel)
