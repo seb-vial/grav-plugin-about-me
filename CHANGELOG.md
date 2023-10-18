@@ -1,3 +1,10 @@
+# v1.2.2
+
+## 18/10/2023
+
+1. [](#bugfix)
+   - Fixing coding error which prevented install/removal of the plugin.
+
 # v1.2.1
 
 ## 12/03/2019
